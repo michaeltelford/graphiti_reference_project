@@ -3,5 +3,6 @@ class PostResource < ApplicationResource
   attribute :upvotes, :integer
   attribute :active, :boolean
 
+  belongs_to :topic
   has_many :comments
 end
