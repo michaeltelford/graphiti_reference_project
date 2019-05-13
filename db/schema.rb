@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_13_024113) do
+ActiveRecord::Schema.define(version: 2019_05_13_093850) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "post_id"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 2019_05_13_024113) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.integer "upvotes"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "title"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
